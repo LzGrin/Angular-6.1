@@ -11,6 +11,7 @@
   <div class="content">
     <h4 class="ui sub header">{{product.count}}</h4>
   </div>
+  <img [src]="product.imageUrl">
   <div class="extras content">
         <span class="middle floated" appLargeText>
             {{product?.price | currency : currentCurrency}}

@@ -11,6 +11,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import {HeaderComponent} from './components/header/header.component';
 import {BannerComponent} from './components/banner/banner.component';
+import {FooterComponent} from './components/footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {BannerComponent} from './components/banner/banner.component';
     HeaderComponent,
     UserProfileComponent,
     PageNotFoundComponent,
-    BannerComponent
+    BannerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
