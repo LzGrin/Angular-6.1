@@ -1,8 +1,158 @@
-<div class="ui container">
-  <h1 *ngIf="searchValue">Searched value: {{searchValue}}</h1>
-  <div class="ui grid column app-products">
-    <div *ngFor="let product of productList" class="eight wide column">
-      <app-product-item [product]="product"></app-product-item>
+<div class="box" id="box">
+
+  <div class='products'>
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/триммер1.jpg" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          14 200.00 р.
+        </div>
+      </div>
+      <div class="title in-card">
+        Профессиональная машинка с аккумуляторным питанием MOSER GENIO PRO FADING EDITION 1874-0053
+      </div>
+      <button class="buttonInCart"
+              onclick="changeCart('Профессиональная машинка с аккумуляторным питанием MOSER GENIO PRO FADING EDITION', 14200,  '1874-0053')">
+        В корзину</button>
+    </div>
+
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/триммер2.jpg" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          14 900.00 р.
+        </div>
+      </div>
+      <div class="title in-card">Профессиональная машинка с комбинрованным питанием MOSER LI+PRO2
+        1888-0050</div>
+      <button
+        onclick="changeCart('Профессиональная машинка с комбинрованным питанием MOSER', 14900, '1888-0050')">В
+        корзину</button>
+    </div>
+
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/триммер3.jpg" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          14 800.00 р.
+        </div>
+      </div>
+      <div class="title in-card">
+        Машинка с комбинрованным питанием MOSER CHROM2STYLE 1877-0050 / 1877-0051
+      </div>
+      <button
+        onclick="changeCart('Машинка с комбинрованным питанием MOSER CHROM2STYLE', 14800, '1877-0050 / 1877-0051' )">В
+        корзину</button>
+    </div>
+
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/машинка4.jpg" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          9 100. 00 р.
+        </div>
+      </div>
+      <div class="title in-card">
+        Триммер Wahl Detailer X-Tra Wide 5 Star
+      </div>
+      <button onclick="changeCart('Триммер Wahl Detailer X-Tra Wide 5 Star', 9100, 4)">В корзину</button>
+    </div>
+
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/триммер5.jpg" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          14 800. 00 р.
+        </div>
+      </div>
+      <div class="title in-card">
+        Профессиональная машинка WAHL MAGIC CLIP CORDLESS METAL EDITION СЕРЕБРИСТЫЙ 8509-016
+      </div>
+      <button
+        onclick="changeCart('Профессиональная машинка WAHL MAGIC CLIP CORDLESS METAL EDITION СЕРЕБРИСТЫЙ', 14000, '8509-016' )">В
+        корзину</button>
+    </div>
+
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/машинка6.jpg" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          7 100. 00 р.
+        </div>
+      </div>
+      <div class="title in-card">Машинка для стрижки Wahl Super Taper</div>
+      <button onclick="changeCart('Машинка для стрижки Wahl Super Taper', 7100, 6)">В корзину</button>
+    </div>
+
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/комбомашинки7.png" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          21 800. 00 р.
+        </div>
+      </div>
+      <div class="title in-card">Машинка+Триммер Wahl Barber Combo</div>
+      <button onclick="changeCart('Машинка+Триммер Wahl Barber Combo', 21800, 7)">В корзину</button>
+    </div>
+
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/шейвербольшой.jpeg" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          11 500. 00 р.
+        </div>
+      </div>
+      <div class="title in-card">Бритва WAHL Finale </div>
+      <button onclick="changeCart('Бритва WAHL Finale', 11500, 8)">В корзину</button>
+    </div>
+
+    <div class="product">
+      <div class="product-link image-container is-square">
+        <img src="images/шейвермини.jpg" width="250px" height="250px">
+      </div>
+      <div class="price in-card">
+        <div class="price in-card">
+          1 750. 00 р.
+        </div>
+      </div>
+      <div class="title in-card">Бритва WAHL Mobile Shaver </div>
+      <button onclick="changeCart('Бритва WAHL Mobile Shaver', 1750, 9)">В корзину</button>
     </div>
   </div>
-</div>
+
+
+  <footer></footer>
+  <div class="loader" id="loader">
+    <div class="loader_inner"> </div>
+  </div>
+
+
+
+
+
+
+
+<!--<div class="ui container">-->
+<!--  <h1 *ngIf="searchValue">Searched value: {{searchValue}}</h1>-->
+<!--  <div class="ui grid column app-products">-->
+<!--    <div *ngFor="let product of productList" class="eight wide column">-->
+<!--      <app-product-item [product]="product"></app-product-item>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
