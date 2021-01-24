@@ -3,16 +3,17 @@ import {ProductService} from '../../services/product.service';
 import {Product} from '../../model/product.model';
 
 @Component({
-  selector: 'app-productline',
-  templateUrl: './productline.component.html',
-  styleUrls: ['./productline.component.less']
+  selector: 'app-product-line',
+  templateUrl: './product-line.component.html',
+  styleUrls: ['./product-line.component.less']
 })
-export class ProductlineComponent implements OnInit {
+export class ProductLineComponent implements OnInit {
   @Input()  product?: Product;
 
   public categories: string[] = [];
 
   public selectedCategory = '';
+  productline: any;
 
   constructor(private productService: ProductService) {
   }

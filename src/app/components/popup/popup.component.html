@@ -1,13 +1,16 @@
 <!--<template id="popup">-->
   <div class="popup">
 				<span class="product-in-basket">In your cart:<img class="close" id="close" onclick="closePopup()"
-                                                          src="images/крестикпопап.png"></span>
+                                                          src="../../../assets/images/cross-popup.png"></span>
     <div class="product-line">
-      <div class="product-line-item">Наименование</div>
+      <div class="product-line">Наименование</div>
       <div class="product-line-item">Кол-во</div>
       <div class="product-line-item">Цена</div>
     </div>
     <div class="popup-list" id="itemsList"></div>
+    <div *ngFor="let product of productline" class="eight wide column">
+      <app-product-line [product]="product"></app-product-line>
+    </div>
   </div>
 <!--</template>-->
 <!-- <template id="jsPopup">Продукты в корзине
@@ -35,6 +38,4 @@
 
 </main>
 
-<div *ngFor="let product of productline" class="eight wide column">
-  <app-productline [product]="product"></app-productline>
-</div>
+

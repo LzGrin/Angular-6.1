@@ -13,7 +13,7 @@ import {HeaderComponent} from './components/header/header.component';
 import {BannerComponent} from './components/banner/banner.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {PopupComponent} from './components/popup/popup.component';
-import {ProductlineComponent} from './components/productLine/productline.component';
+import {ProductLineComponent} from './components/product-line/product-line.component';
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import {ProductlineComponent} from './components/productLine/productline.compone
     BannerComponent,
     FooterComponent,
     PopupComponent,
-    ProductlineComponent
+    ProductLineComponent
   ],
   imports: [
     BrowserModule,
