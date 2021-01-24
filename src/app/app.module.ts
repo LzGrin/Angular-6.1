@@ -9,13 +9,18 @@ import {CommonModule} from '@angular/common';
 import {UserProfileComponent} from './components/user-profile/user-profile.component';
 import {AppRoutingModule} from './app-routing.module';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import {HeaderComponent} from './components/header/header.component';
+import {BannerComponent} from './components/banner/banner.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    HeaderComponent,
     UserProfileComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

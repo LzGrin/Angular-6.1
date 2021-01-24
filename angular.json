@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "angular-lesson2021"
+  "defaultProject": "angular-lesson2021",
+  "cli": {
+    "analytics": false
+  }
 }
