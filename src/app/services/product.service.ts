@@ -5,9 +5,11 @@ import {products} from '../mocks/products.mock';
 @Injectable()
 export class ProductService {
   private currentCategory = '';
+  private productCategory: string;
 
   constructor() {
     this.currentCategory = this.getCategories()[0];
+    this.productCategory = this.getCategories()[0];
   }
 
   getProducts(): Product[] {
@@ -32,5 +34,11 @@ export class ProductService {
 
   setCurrentCategory(value: string): void {
     this.currentCategory = value;
+    this.productCategory = value;
+  }
+
+  // tslint:disable-next-line:typedef
+  isLoading() {
+    return undefined;
   }
 }

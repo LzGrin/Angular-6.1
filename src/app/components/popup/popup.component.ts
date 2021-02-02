@@ -19,6 +19,8 @@ export class PopupComponent implements OnInit {
       description: 'Профессиональная машинка с комбинрованным питанием', price: 213, count: 1, imageUrl: '/assets/images/триммер2.jpg'
     }
   ];
+  category: any;
+
   constructor(private productService: ProductService) {
   }
 
@@ -26,7 +28,7 @@ export class PopupComponent implements OnInit {
     this.categories = this.productService.getCategories();
   }
 
-  public changeCategory(event: MouseEvent, newCategory: string = ''): void {
+  public closePopup(event: MouseEvent, newCategory: string = ''): void {
     event.preventDefault();
     this.selectedCategory = newCategory;
   }

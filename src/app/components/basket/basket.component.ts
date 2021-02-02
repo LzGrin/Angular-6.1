@@ -1,20 +1,21 @@
 import {Component, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
 import {ProductService} from '../../services/product.service';
-
-
+import {Product} from '../../model/product.model';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.less']
+  selector: 'app-basket',
+  templateUrl: './basket.component.html',
+  styleUrls: ['./basket.component.less']
 })
-export class HeaderComponent implements OnInit {
+export class BasketComponent implements OnInit {
   @Input() childTemplate?: TemplateRef<any>;
 
   public categories: string[] = [];
 
-  public selectedCategory = '';
-    constructor(private productService: ProductService) {
+ public selectedCategory = '';
+  private cartServices: any;
+
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
@@ -25,8 +26,4 @@ export class HeaderComponent implements OnInit {
     event.preventDefault();
     this.selectedCategory = newCategory;
   }
-
-  // public showCount = (): void => {
-  //   this.cartServices.getCartServices();
-  // }
 }

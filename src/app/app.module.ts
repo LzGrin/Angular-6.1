@@ -14,6 +14,8 @@ import {BannerComponent} from './components/banner/banner.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {PopupComponent} from './components/popup/popup.component';
 import {ProductLineComponent} from './components/product-line/product-line.component';
+import {CounterComponent} from './components/counter/counter.component';
+import {BasketComponent} from './components/basket/basket.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import {ProductLineComponent} from './components/product-line/product-line.compo
     BannerComponent,
     FooterComponent,
     PopupComponent,
-    ProductLineComponent
+    ProductLineComponent,
+    CounterComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,9 @@ import {ProductLineComponent} from './components/product-line/product-line.compo
   ],
   providers: [
     ProductService
+  ],
+  exports: [
+    CounterComponent
   ],
   bootstrap: [AppComponent]
 })

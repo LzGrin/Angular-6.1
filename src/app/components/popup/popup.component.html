@@ -1,7 +1,9 @@
 <!--<template id="popup">-->
   <div class="popup">
-				<span class="product-in-basket">In your cart:<img class="close" id="close" onclick="closePopup()"
-                                                          src="../../../assets/images/cross-popup.png"></span>
+				<span class="product-in-basket">In your cart:<img *ngFor="let category of categories" class="close" id="close" [routerLink]="['/products', category]"
+                                                          [class.active]="selectedCategory===category" onclick="closePopup($event, category)"
+
+                                                          src="../../../assets/images/cross-popup.png"> {{category}}</span>
     <div class="product-line">
       <div class="product-line">Наименование</div>
       <div class="product-line-item">Кол-во</div>

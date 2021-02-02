@@ -22,6 +22,5 @@ export class MenuComponent implements OnInit {
 
   public changeCategory(event: MouseEvent, newCategory: string = ''): void {
     event.preventDefault();
-    this.selectedCategory = newCategory;
   }
 }

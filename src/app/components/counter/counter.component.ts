@@ -4,17 +4,19 @@ import {ProductService} from '../../services/product.service';
 
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.less']
+  selector: 'app-counter',
+  templateUrl: './counter.component.html',
+  styleUrls: ['./counter.component.less']
 })
-export class HeaderComponent implements OnInit {
-  @Input() childTemplate?: TemplateRef<any>;
+export class CounterComponent implements OnInit {
+  @Input() count?: number;
 
   public categories: string[] = [];
 
   public selectedCategory = '';
-    constructor(private productService: ProductService) {
+
+
+  constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
@@ -25,8 +27,5 @@ export class HeaderComponent implements OnInit {
     event.preventDefault();
     this.selectedCategory = newCategory;
   }
-
-  // public showCount = (): void => {
-  //   this.cartServices.getCartServices();
-  // }
 }
+
