@@ -41,4 +41,10 @@ export class ProductService {
   isLoading() {
     return undefined;
   }
+
+  getProductById(id: any): Product  {
+    const result = products.find(element => element === id);
+    if (result) { return result; } else { return {} as Product; }
+
+  }
 }

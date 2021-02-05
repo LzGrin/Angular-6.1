@@ -25,7 +25,7 @@ export class PopupComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.categories = this.productService.getCategories();
+    // this.categories = this.productService.getCategories();
   }
 
   public closePopup(event: MouseEvent, newCategory: string = ''): void {

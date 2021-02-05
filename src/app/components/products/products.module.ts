@@ -13,7 +13,7 @@ import {ProductDetailsComponent} from './product-details/product-details.compone
   declarations: [ProductItemComponent, CurrencyPipe, LargeTextDirective, ProductsComponent, ProductDetailsComponent],
   providers: [ProductService, CartService],
   imports: [BrowserModule, CommonModule],
-  exports: [ProductItemComponent, ProductsComponent]
+  exports: [ProductItemComponent, ProductsComponent, ProductDetailsComponent]
 })
 export class ProductsModule {
 }

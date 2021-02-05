@@ -9,8 +9,7 @@ import {LocalStorageGuard} from './guards/local-storage.guard';
 const routes: Routes = [
   {path: 'user-profile', component: UserProfileComponent, canActivate: [LocalStorageGuard]},
   {path: 'products', component: ProductsComponent},
-  {path: 'products/details', component: ProductDetailsComponent}, // если поменять порядок с нижним, то роутинг будет применён только для products/:
-  {path: 'products/:categoryId', component: ProductsComponent},
+  {path: 'products/:productId', component: ProductDetailsComponent}, // если поменять порядок с нижним, то роутинг будет применён только для products/:
   {path: '', redirectTo: 'products', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
 

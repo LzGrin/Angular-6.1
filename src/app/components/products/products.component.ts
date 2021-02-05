@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ProductService} from '../../services/product.service';
 import {Product} from '../../model/product.model';
 import {ActivatedRoute, Params} from '@angular/router';
@@ -12,32 +12,19 @@ import {products} from '../../mocks/products.mock';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.less']
 })
-export class ProductsComponent implements OnInit {
-  public searchValue = '';
-
-  public productList: Subject<Product[]> = new ReplaySubject();
-  public loader$: Observable<boolean> = new BehaviorSubject<boolean>(false);
+export class ProductsComponent implements OnInit, OnDestroy {
+  public productList: Product[] = products;
   private unsubscribe$: Subject<void> = new Subject();
-
-  constructor(private productService: ProductService,
-              private route: ActivatedRoute) {
+  constructor(private productService: ProductService) {
   }
-
   ngOnInit(): void {
-    // @ts-ignore
-    this.loader$ = this.productService.isLoading();
-    this.route.params
+    this.productService.getProducts()
       .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((params) => {
-        const categoryId = params?.categoryId || '';
-        this.productService.setCurrentCategory(categoryId);
-        this.productService.getProductsByCategory()
-          .pipe(takeUntil(this.unsubscribe$))
-          .subscribe(products => this.productList.next(products));
+      .subscribe( (productList: Product[]) => {
+        this.productList = productList;
       });
   }
-
   ngOnDestroy(): void {
-    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 }
