@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
-import {ProductService} from '../../services/product.service';
+import {Component, Input, OnInit, TemplateRef} from '@angular/core';
+
 
 @Component({
   selector: 'app-menu',
@@ -11,16 +11,10 @@ export class MenuComponent implements OnInit {
 
   public categories: string[] = [];
 
-  public selectedCategory = '';
-
-  constructor(private productService: ProductService) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    this.categories = this.productService.getCategories();
   }
 
-  public changeCategory(event: MouseEvent, newCategory: string = ''): void {
-    event.preventDefault();
-  }
 }
