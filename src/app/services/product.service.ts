@@ -1,6 +1,6 @@
 import {Observable, of} from 'rxjs';
 import {Product} from '../model/product.model';
-import {products} from '../mocks/products.mock';
+import {products} from '../../../server/mocks/products.mock';
 
 export class ProductService {
   constructor() {

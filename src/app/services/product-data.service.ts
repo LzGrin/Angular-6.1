@@ -1,4 +1,4 @@
-import {products} from '../mocks/products.mock';
+import {products} from '../../../server/mocks/products.mock';
 import {Product} from '../model/product.model';
 
 

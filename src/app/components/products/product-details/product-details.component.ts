@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ProductService} from '../../../services/product.service';
 import {Product} from '../../../model/product.model';
-import {products} from '../../../mocks/products.mock';
+import {products} from '../../../../../server/mocks/products.mock';
 import { ActivatedRoute, Params } from '@angular/router';
 import {ProductDataService} from '../../../services/product-data.service';
 
