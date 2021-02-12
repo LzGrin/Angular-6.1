@@ -11,6 +11,9 @@
   <div class="content">
     <h4 class="ui sub header">{{product.count}}</h4>
   </div>
+  <div class="ui sub header" >
+    <a [href]="'products/' + product.id">Подробнее о товаре</a>
+  </div>
   <img class="img" [src]="product.imageUrl">
   <div class="extras content">
         <span class="middle floated" appLargeText>
@@ -18,5 +21,4 @@
         </span>
     <button class="ui button primary right floated" (click)="onAddToCart()">Add to cart</button>
   </div>
-  <a href='products/:productId' >{{product.id}}</a>
 </div>

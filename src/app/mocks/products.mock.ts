@@ -2,7 +2,7 @@ import {Product} from '../model/product.model';
 
 export const products: Product[] = [
   {
-    id: 18740053, name: ' MOSER GENIO PRO FADING EDITION', category: 'Машинки',
+    id: '18740053', name: ' MOSER GENIO PRO FADING EDITION', category: 'Машинки',
     description: 'Профессиональная машинка с аккумуляторным питанием', price: 203, count: 1, imageUrl: '/assets/images/trimmer1.jpg'
 
 
@@ -16,7 +16,7 @@ export const products: Product[] = [
     description: 'Машинка с комбинрованным питанием', price: 212, count: 1, imageUrl: '/assets/images/trimmer3.jpg'
   },
   {
-    id: 4, name: 'Wahl Detailer X-Tra Wide 5 Star', category: 'Триммер',
+    id: '4', name: 'Wahl Detailer X-Tra Wide 5 Star', category: 'Триммер',
     description: 'Триммер',
     price: 9130, count: 1, imageUrl: '/assets/images/hairClipper4.jpg'
   },
@@ -25,20 +25,20 @@ export const products: Product[] = [
     description: 'Профессиональная машинка', price: 212, count: 1, imageUrl: '/assets/images/trimmer5.jpg'
   },
   {
-    id: 6, name: 'Wahl Super Taper', category: 'Машинки',
+    id: '6', name: 'Wahl Super Taper', category: 'Машинки',
     description: 'Машинка для стрижки', price: 102, count: 1, imageUrl: '/assets/images/hairClipper6.jpg'
   },
   {
-    id: 7, name: 'Wahl Barber Combo', category: 'Машинки',
+    id: '7', name: 'Wahl Barber Combo', category: 'Машинки',
     description: 'Машинка+Триммер',
     price: 312, count: 1, imageUrl: '/assets/images/comboHairClipper7.jpg'
   },
   {
-    id: 8, name: 'WAHL Finale', category: 'Шейвер',
+    id: '8', name: 'WAHL Finale', category: 'Шейвер',
     description: 'Бритва', price: 165, count: 1, imageUrl: '/assets/images/shaverBig.jpg'
   },
   {
-    id: 11, name: 'WAHL Mobile Shaver', category: 'Шейвер',
+    id: '11', name: 'WAHL Mobile Shaver', category: 'Шейвер',
     description: 'Бритва', price: 25, count: 1, imageUrl: '/assets/images/shaverMini.jpg'
   }
 ];

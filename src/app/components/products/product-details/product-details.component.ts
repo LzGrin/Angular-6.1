@@ -3,6 +3,7 @@ import {ProductService} from '../../../services/product.service';
 import {Product} from '../../../model/product.model';
 import {products} from '../../../mocks/products.mock';
 import { ActivatedRoute, Params } from '@angular/router';
+import {ProductDataService} from '../../../services/product-data.service';
 
 
 
@@ -13,7 +14,6 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
 public productDetails!: Product;
-
   // public productId: Product[] = products;
      constructor(private productService: ProductService,
                  private route: ActivatedRoute) {

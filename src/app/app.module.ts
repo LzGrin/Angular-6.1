@@ -16,6 +16,7 @@ import {PopupComponent} from './components/popup/popup.component';
 import {ProductLineComponent} from './components/product-line/product-line.component';
 import {CounterComponent} from './components/counter/counter.component';
 import {BasketComponent} from './components/basket/basket.component';
+import {ProductDataService} from './services/product-data.service';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {BasketComponent} from './components/basket/basket.component';
     AppRoutingModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    ProductDataService
   ],
   exports: [
     CounterComponent

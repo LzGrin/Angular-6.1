@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
 import {ProductService} from '../../services/product.service';
-
-
+import {ProductDataService} from '../../services/product-data.service';
+import {CartService} from '../../services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -17,6 +17,9 @@ export class HeaderComponent implements OnInit {
     constructor(private productService: ProductService) {
   }
 
+  showPopup(): void {
+    this.onButtonClick.emit();
+  }
   ngOnInit(): void {
     this.categories = this.productService.getCategories();
   }

@@ -26,4 +26,7 @@ export class BasketComponent implements OnInit {
     event.preventDefault();
     this.selectedCategory = newCategory;
   }
+  _openPopup(): void {
+    this.openPopup.emit();
+  }
 }
