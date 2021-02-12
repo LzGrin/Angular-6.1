@@ -14,16 +14,13 @@ export class ProductItemComponent implements OnInit {
   @Output() addToCart: EventEmitter<any> = new EventEmitter();
 
   currentCurrency = '$';
-    constructor(private cartService: CartService,
-                private productDataService: ProductDataService) {
+    constructor(private productDataService: ProductDataService) {
   }
 
   ngOnInit(): void {
   }
 
   onAddToCart(): void {
-    let cartCount = this.cartService.getCartCount();
-    this.cartService.setCartCount(++cartCount);
     this.productDataService.addProductToCart(this.product.id);
    }
 }

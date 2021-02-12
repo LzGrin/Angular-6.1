@@ -7,6 +7,7 @@ import {takeUntil} from 'rxjs/operators';
 import {products} from '../../../../server/mocks/products.mock';
 
 
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',

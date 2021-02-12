@@ -3,11 +3,8 @@
   				<span class="product-in-basket">In your cart:<img  (click)="_closePopup()" class="close" id="close"
                                                           src="../../../assets/images/cross-popup.png"></span>
  <div *ngFor="let product of productListInCart">
-   {{product.name}}
+   <app-product-line [product]="product"></app-product-line>
  </div>
-  <button (click)="increment()">+</button>
-  <span>{{cartCount}}</span>
-  <button (click)="decrement()">-</button>
 </div>
 
 

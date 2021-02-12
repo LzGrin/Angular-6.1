@@ -1,6 +1,8 @@
 <div class="product-line">
-  <div class="product-line">{{product?.name}}</div>
-  <div class="product-line-item"><app-counter [count] = "product?.count"></app-counter></div>
-  <div class="product-line-item">{{product?.price}}</div>
+  <div class="product-line">{{product.name}}</div>
+  <div class="product-line-item"><app-counter (countChange)="countChange($event)" [count] = "product.count"></app-counter></div>
+  <div class="product-line-item">{{product.price}}</div>
 </div>
+
 <div class="popup-list" id="itemsList"></div>
+

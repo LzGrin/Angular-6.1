@@ -1,11 +1,10 @@
 <div class="app-container">
-  <app-header></app-header>
-  <app-menu >
-  </app-menu>
+  <app-header (onButtonClick) = "openPopup()" [cartCount]="cartCount"></app-header>
+<!--  <app-menu >-->
+<!--  </app-menu>-->
    <router-outlet>
   </router-outlet>
-<app-popup>
-  <app-product-line></app-product-line>
+<app-popup *ngIf="isPopupShow" (onChangeCount) = "changeCount($event)" (onClosePopup)="closePopup()">
 </app-popup>
 <!--<app-basket></app-basket>-->
 <app-footer></app-footer>

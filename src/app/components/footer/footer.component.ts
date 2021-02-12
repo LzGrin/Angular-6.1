@@ -7,21 +7,9 @@ import {ProductService} from '../../services/product.service';
   styleUrls: ['./footer.component.less']
 })
 export class FooterComponent implements OnInit {
-  @Input() childTemplate?: TemplateRef<any>;
-
-  public categories: string[] = [];
-
-  public selectedCategory = '';
-
   constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    this.categories = this.productService.getCategories();
-  }
-
-  public changeCategory(event: MouseEvent, newCategory: string = ''): void {
-    event.preventDefault();
-    this.selectedCategory = newCategory;
   }
 }

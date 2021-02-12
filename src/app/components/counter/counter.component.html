@@ -1,8 +1,8 @@
 <div id="counterTemplate">
   <div>
-    <button type="button" class="jsDecrease">-</button>
-    <input type="text" class="jsValue" [value]="count" >
-    <button type="button" class="jsIncrease">+</button>
+    <button type="button" (click)="decrease()" >-</button>
+    <input type="text"  [value]="count" >
+    <button type="button" (click)="increase()">+</button>
   </div>
 </div>
 

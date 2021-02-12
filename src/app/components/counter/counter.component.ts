@@ -9,23 +9,20 @@ import {ProductService} from '../../services/product.service';
   styleUrls: ['./counter.component.less']
 })
 export class CounterComponent implements OnInit {
-  @Input() count?: number;
-
-  public categories: string[] = [];
-
-  public selectedCategory = '';
-
-
+  @Input() count!: number;
+  @Output() countChange: EventEmitter<number> = new EventEmitter<number>();
   constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    this.categories = this.productService.getCategories();
   }
-
-  public changeCategory(event: MouseEvent, newCategory: string = ''): void {
-    event.preventDefault();
-    this.selectedCategory = newCategory;
+  decrease(): void {
+    this.count--;
+    this.countChange.emit(this.count);
+     }
+  increase(): void {
+    this.count++;
+    this.countChange.emit(this.count);
   }
 }
 

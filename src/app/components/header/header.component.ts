@@ -9,27 +9,21 @@ import {CartService} from '../../services/cart.service';
   styleUrls: ['./header.component.less']
 })
 export class HeaderComponent implements OnInit {
-  @Input() childTemplate?: TemplateRef<any>;
-
-  public categories: string[] = [];
-
-  public selectedCategory = '';
-    constructor(private productService: ProductService) {
+  public count: number = 0;
+  @Input() public set cartCount(value: number) {
+    this.count = value;
+  }
+  @Output() onButtonClick: EventEmitter<void> = new EventEmitter<void>();
+  constructor(private productService: ProductService,
+              private productDataService: ProductDataService) {
   }
 
   showPopup(): void {
     this.onButtonClick.emit();
   }
   ngOnInit(): void {
-    this.categories = this.productService.getCategories();
+    this.productDataService.getCartCount$().subscribe((count: number) => {
+      this.count = count;
+    });
   }
-
-  public changeCategory(event: MouseEvent, newCategory: string = ''): void {
-    event.preventDefault();
-    this.selectedCategory = newCategory;
-  }
-
-  // public showCount = (): void => {
-  //   this.cartServices.getCartServices();
-  // }
 }

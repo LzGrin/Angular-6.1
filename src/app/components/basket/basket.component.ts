@@ -8,23 +8,11 @@ import {Product} from '../../model/product.model';
   styleUrls: ['./basket.component.less']
 })
 export class BasketComponent implements OnInit {
-  @Input() childTemplate?: TemplateRef<any>;
-
-  public categories: string[] = [];
-
- public selectedCategory = '';
-  private cartServices: any;
-
+  @Output() openPopup = new EventEmitter<void>();
   constructor(private productService: ProductService) {
   }
 
   ngOnInit(): void {
-    this.categories = this.productService.getCategories();
-  }
-
-  public changeCategory(event: MouseEvent, newCategory: string = ''): void {
-    event.preventDefault();
-    this.selectedCategory = newCategory;
   }
   _openPopup(): void {
     this.openPopup.emit();
