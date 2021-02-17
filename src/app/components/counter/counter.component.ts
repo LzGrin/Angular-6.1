@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
-import {ProductService} from '../../services/product.service';
+// import {ProductService} from '../../services/product.service';
 
 
 
@@ -11,7 +11,7 @@ import {ProductService} from '../../services/product.service';
 export class CounterComponent implements OnInit {
   @Input() count!: number;
   @Output() countChange: EventEmitter<number> = new EventEmitter<number>();
-  constructor(private productService: ProductService) {
+  constructor() {
   }
 
   ngOnInit(): void {
