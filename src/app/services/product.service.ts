@@ -1,4 +1,4 @@
-import {Observable, of} from 'rxjs';
+import {Observable} from 'rxjs';
 import {Product} from '../model/product.model';
 import {products} from '../../../server/mocks/products.mock';
 import {HttpClient} from '@angular/common/http';

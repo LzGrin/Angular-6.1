@@ -1,11 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ProductService} from '../../services/product.service';
 import {Product} from '../../model/product.model';
-import {ActivatedRoute, Params} from '@angular/router';
-import {BehaviorSubject, Observable, pipe, ReplaySubject, Subject, Subscription} from 'rxjs';
+import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {products} from '../../../../server/mocks/products.mock';
-import {HttpClient} from '@angular/common/http';
+
 
 
 
@@ -19,8 +18,6 @@ export class ProductsComponent implements OnInit, OnDestroy {
   private unsubscribe$: Subject<void> = new Subject();
   constructor(private productService: ProductService) {
   }
-  // getProducts(): Observable<Product[]> {
-  // }
   ngOnInit(): void {
     this.productService.getProducts()
       .pipe(takeUntil(this.unsubscribe$))

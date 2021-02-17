@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {MenuComponent} from './components/menu/menu.component';
 import {FormsModule} from '@angular/forms';
-// import {ProductService} from './services/product.service';
+import {ProductService} from './services/product.service';
 import {ProductsModule} from './components/products/products.module';
 import {CommonModule} from '@angular/common';
 import {UserProfileComponent} from './components/user-profile/user-profile.component';
@@ -18,7 +18,6 @@ import {CounterComponent} from './components/counter/counter.component';
 import {BasketComponent} from './components/basket/basket.component';
 import {ProductDataService} from './services/product-data.service';
 import {HttpClientModule} from '@angular/common/http';
-import {ProductService} from './services/product.service';
 
 
 @NgModule({
