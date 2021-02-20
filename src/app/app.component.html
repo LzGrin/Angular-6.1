@@ -1,7 +1,8 @@
 <div class="app-container">
-  <app-header (onButtonClick) = "openPopup()" [cartCount]="cartCount"></app-header>
+  <app-header (onButtonClick) = "openPopup()" [cartCount]="cartCount" (onButtonClickUserProfile) = "openUserProfile()"></app-header>
 <!--  <app-menu >-->
 <!--  </app-menu>-->
+  <app-user-profile *ngIf="isUserProfileShow" (onCloseUserProfile)="closeUserProfile()"></app-user-profile>
    <router-outlet>
   </router-outlet>
 <app-popup *ngIf="isPopupShow" (onChangeCount) = "changeCount($event)" (onClosePopup)="closePopup()">

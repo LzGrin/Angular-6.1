@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
     this.count = value;
   }
   @Output() onButtonClick: EventEmitter<void> = new EventEmitter<void>();
+  @Output() onButtonClickUserProfile: EventEmitter<void> = new EventEmitter<void>();
   constructor(private productDataService: ProductDataService) {
   }
 
@@ -25,4 +26,9 @@ export class HeaderComponent implements OnInit {
       this.count = count;
     });
   }
+
+  showUserProfile(): void {
+    this.onButtonClickUserProfile.emit();
+  }
+
 }

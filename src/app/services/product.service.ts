@@ -12,9 +12,7 @@ export class ProductService {
     return this.http.get<Product[]>('/api/products');
   }
 
-  getProductById(id: string): Product  {
-      const result = products.find(element => element.id === id);
-      if (result) { return result; } else { return {} as Product; }
-
+  getProductById(id: string): Observable<Product>  {
+    return this.http.get<Product>('/api/products' + 'id'); // тут возвращаем продукт по ид
   }
 }
