@@ -13,6 +13,7 @@ import {Product} from './model/product.model';
 export class AppComponent {
   public isPopupShow = false;
   public isUserProfileShow = false;
+  public isAdminProfileShow = false;
   public cartCount = 0;
     constructor() {
   }
@@ -30,6 +31,9 @@ export class AppComponent {
   }
   closeUserProfile(): void {
     this.isUserProfileShow = false;
+  }
+  closeAdminProfile(): void {
+    this.isAdminProfileShow = false;
   }
 
 

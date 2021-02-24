@@ -3,6 +3,7 @@
 <!--  <app-menu >-->
 <!--  </app-menu>-->
   <app-user-profile *ngIf="isUserProfileShow" (onCloseUserProfile)="closeUserProfile()"></app-user-profile>
+  <app-admin *ngIf="isAdminProfileShow" (onCloseAdmin)="closeAdminProfile()"></app-admin>
    <router-outlet>
   </router-outlet>
 <app-popup *ngIf="isPopupShow" (onChangeCount) = "changeCount($event)" (onClosePopup)="closePopup()">

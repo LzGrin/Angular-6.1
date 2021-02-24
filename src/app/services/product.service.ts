@@ -13,6 +13,6 @@ export class ProductService {
   }
 
   getProductById(id: string): Observable<Product>  {
-    return this.http.get<Product>('/api/products' + 'id'); // тут возвращаем продукт по ид
+    return this.http.get<Product>('/api/products/' + 'id'); // тут возвращаем продукт по ид
   }
 }

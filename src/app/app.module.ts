@@ -2,7 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {MenuComponent} from './components/menu/menu.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ProductService} from './services/product.service';
 import {ProductsModule} from './components/products/products.module';
 import {CommonModule} from '@angular/common';
@@ -18,6 +18,7 @@ import {CounterComponent} from './components/counter/counter.component';
 import {BasketComponent} from './components/basket/basket.component';
 import {ProductDataService} from './services/product-data.service';
 import {HttpClientModule} from '@angular/common/http';
+import {AddProductComponent} from './components/admin/add-Product.component';
 
 
 @NgModule({
@@ -32,16 +33,18 @@ import {HttpClientModule} from '@angular/common/http';
     PopupComponent,
     ProductLineComponent,
     CounterComponent,
-    BasketComponent
+    BasketComponent,
+    AddProductComponent
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    CommonModule,
-    FormsModule,
-    ProductsModule,
-    AppRoutingModule
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        CommonModule,
+        FormsModule,
+        ProductsModule,
+        AppRoutingModule,
+        ReactiveFormsModule
+    ],
   providers: [
     ProductService,
     ProductDataService

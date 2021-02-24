@@ -17,7 +17,7 @@ import {products} from '../../../../../server/mocks/products.mock';
 export class ProductDetailsComponent implements OnInit, OnDestroy {
 public productDetails!: Product;
   private unsubscribe$: Subject<void> = new Subject();
-  public product!: Product;
+  // public product!: Product;
      constructor(private productService: ProductService,
                  private route: ActivatedRoute) {
      }
@@ -29,7 +29,7 @@ public productDetails!: Product;
       this.productService.getProductById(productId) // просим сервисдать нам продукт по найденому ид выше
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe( (product: Product) => { // сразу подписались, тут принимаем сразу продукт, который нам вернется из обсервбл
-        this.product = product; // и вот тут сохраняем найденный продукт в поле, чтобы потом к нему обратиться
+        this.productDetails = product; // и вот тут сохраняем найденный продукт в поле, чтобы потом к нему обратиться
       });
     });
   }

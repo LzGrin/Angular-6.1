@@ -1,0 +1,70 @@
+<span><img  (click)="_onCloseAdmin()" class="close" id="close"
+            src="../../../assets/images/cross-popup.png"></span>
+<form [formGroup]=addProductForm class="ui form">
+  <div class="field">
+    <label>Add Name</label>
+    <input formControlName="name" type="text" name="name" placeholder="name" required>
+
+    <!--      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="error">-->
+    <div *ngIf="addProductForm?.errors?.required"> First Name is required</div>
+    <div *ngIf="addProductForm?.errors?.minlength"> First Mame must be at least 3 characters long</div>
+  </div>
+</form>
+
+<form [formGroup]=addProductForm class="ui form">
+  <div class="field">
+    <label>Add Price</label>
+    <input formControlPrice="price" type="text" name="price" placeholder="price" required>
+
+    <!--      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="error">-->
+    <div *ngIf="addProductForm?.errors?.required"> First Name is required</div>
+    <div *ngIf="addProductForm?.errors?.minlength"> First Mame must be at least 3 characters long</div>
+  </div>
+</form>
+
+<form [formGroup]=addProductForm class="ui form">
+  <div class="field">
+    <label>Add id</label>
+    <input formControlId="id" type="text" name="id" placeholder="id" required>
+
+    <!--      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="error">-->
+    <div *ngIf="addProductForm?.errors?.required"> First Name is required</div>
+    <div *ngIf="addProductForm?.errors?.minlength"> First Mame must be at least 3 characters long</div>
+  </div>
+</form>
+
+
+<form [formGroup]=addProductForm class="ui form">
+  <div class="field">
+    <label>Add category</label>
+    <input formControlCategory="category" type="text" name="category" placeholder="category" required>
+
+    <!--      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="error">-->
+    <div *ngIf="addProductForm?.errors?.required"> First Name is required</div>
+    <div *ngIf="addProductForm?.errors?.minlength"> First Mame must be at least 3 characters long</div>
+  </div>
+</form>
+
+
+<form [formGroup]=addProductForm class="ui form">
+  <div class="field">
+    <label>Add Description</label>
+    <input formControlDescription="description" type="text" name="description" placeholder="description" required>
+
+    <!--      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="error">-->
+    <div *ngIf="addProductForm?.errors?.required"> First Name is required</div>
+    <div *ngIf="addProductForm?.errors?.minlength"> First Mame must be at least 3 characters long</div>
+  </div>
+</form>
+
+
+<form [formGroup]=addProductForm class="ui form">
+  <div class="field">
+    <label>Add Count</label>
+    <input formControlCount="count" type="text" name="count" placeholder="count" required>
+
+    <!--      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="error">-->
+    <div *ngIf="addProductForm?.errors?.required"> First Count is required</div>
+    <div *ngIf="addProductForm?.errors?.minlength"> First Count must be at least 3 characters long</div>
+  </div>
+</form>

@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   }
   @Output() onButtonClick: EventEmitter<void> = new EventEmitter<void>();
   @Output() onButtonClickUserProfile: EventEmitter<void> = new EventEmitter<void>();
+  @Output() onButtonClickAdminProfile: EventEmitter<void> = new EventEmitter<void>();
   constructor(private productDataService: ProductDataService) {
   }
 
@@ -29,6 +30,9 @@ export class HeaderComponent implements OnInit {
 
   showUserProfile(): void {
     this.onButtonClickUserProfile.emit();
+  }
+  showAdminProfile(): void {
+    this.onButtonClickAdminProfile.emit();
   }
 
 }
