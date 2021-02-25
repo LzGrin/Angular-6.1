@@ -5,7 +5,6 @@ export const products: Product[] = [
     id: '18740053', name: ' MOSER GENIO PRO FADING EDITION', category: 'Машинки',
     description: 'Профессиональная машинка с аккумуляторным питанием', price: 203, count: 1, imageUrl: '/assets/images/trimmer1.jpg'
 
-
   },
   {
     id: '1888-0050', name: 'MOSER LI+PRO2', category: 'Машинки',

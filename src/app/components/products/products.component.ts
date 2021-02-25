@@ -3,7 +3,7 @@ import {ProductService} from '../../services/product.service';
 import {Product} from '../../model/product.model';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
-import {products} from '../../../../server/mocks/products.mock';
+
 
 
 
@@ -14,7 +14,7 @@ import {products} from '../../../../server/mocks/products.mock';
   styleUrls: ['./products.component.less']
 })
 export class ProductsComponent implements OnInit, OnDestroy {
-  public productList: Product[] = products;
+  public productList: Product[] = [];
   private unsubscribe$: Subject<void> = new Subject();
   constructor(private productService: ProductService) {
   }
