@@ -19,6 +19,7 @@ import {BasketComponent} from './components/basket/basket.component';
 import {ProductDataService} from './services/product-data.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AddProductComponent} from './components/admin/add-Product.component';
+import {LoginComponent} from './components/login/login.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import {AddProductComponent} from './components/admin/add-Product.component';
     ProductLineComponent,
     CounterComponent,
     BasketComponent,
-    AddProductComponent
+    AddProductComponent,
+    LoginComponent
   ],
     imports: [
         HttpClientModule,

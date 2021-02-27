@@ -1,0 +1,32 @@
+<app-login>Авторизация</app-login>
+<div class="ui container app-container-user-profile">
+  <form [formGroup]=loginForm class="ui form">
+    <div class="field">
+      <label>First Name</label>
+      <input formControlName="firstName" type="text" name="first-name" placeholder="First Name" required>
+
+      <!--      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="error">-->
+      <div *ngIf="firstName?.errors?.required"> First Name is required</div>
+      <div *ngIf="firstName?.errors?.minlength"> First Mame must be at least 3 characters long</div>
+    </div>
+    <div class="field">
+      <label>Last Name</label>
+      <input formControlName="lastName" type="text" name="last-name" placeholder="Last Name" required>
+      <!--      <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"-->
+      <!--           class="error">-->
+      <div *ngIf="lastName?.errors?.required"> Last Name is required</div>
+      <div *ngIf="lastName?.errors?.minlength"> Last Name must be at least 3 characters long</div>
+    </div>
+
+    <div class="field">
+      <label>Email</label>
+      <input formControlName="email" name="email" placeholder="email" required type="email">
+      <!--      <div *ngIf="email.invalid && (email.dirty || email?.touched)"-->
+      <!--           class="error">-->
+      <div *ngIf="email?.errors?.required"> Email is required</div>
+      <div *ngIf="email?.errors?.pattern"> Email must be correct (email@email.com)</div>
+    </div>
+
+    <button class="ui button" type="submit">Submit</button>
+  </form>
+</div>

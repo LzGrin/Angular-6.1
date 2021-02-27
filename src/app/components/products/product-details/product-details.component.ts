@@ -4,7 +4,6 @@ import {Product} from '../../../model/product.model';
 import {ActivatedRoute, Params} from '@angular/router';
 import {takeUntil} from 'rxjs/operators';
 import {Observer, Subject} from 'rxjs';
-import {products} from '../../../../../server/mocks/products.mock';
 
 
 

@@ -6,14 +6,18 @@ import {PageNotFoundComponent} from './components/page-not-found/page-not-found.
 import {ProductDetailsComponent} from './components/products/product-details/product-details.component';
 import {LocalStorageGuard} from './guards/local-storage.guard';
 import {AddProductComponent} from './components/admin/add-Product.component';
+import {LoginComponent} from './components/login/login.component';
+
 
 const routes: Routes = [
+  {path: 'login', component: LoginComponent},
   {path: 'user-profile', component: UserProfileComponent, canActivate: [LocalStorageGuard]},
   {path: 'products', component: ProductsComponent},
   {path: 'products/:productId', component: ProductDetailsComponent}, // если поменять порядок с нижним, то роутинг будет применён только для products/:
   {path: '', redirectTo: 'products', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent},
-  {path: 'admin/addProduct', component: AddProductComponent},
+  {path: 'admin/addProduct', component: AddProductComponent }
+
 
 ]; // sets up routes constant where you define your routes
 
